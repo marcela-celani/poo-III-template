@@ -1,0 +1,38 @@
+get http://localhost:3003/users
+###
+
+get http://localhost:3003/accounts
+###
+
+get http://localhost:3003/accounts/a003/balance
+###
+
+post http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "id": "u003",
+    "name": "Sicrano",
+    "email": "sicrano@email.com",
+    "password": "fulano123"
+}
+###
+
+post http://localhost:3003/accounts
+Content-Type: application/json
+
+ {
+    "id": "a003",
+    "balance": 5,
+    "ownerId": "u001"
+  }
+###
+
+put http://localhost:3003/accounts/a001/balance
+Content-Type: application/json
+
+{
+    "id": "a001",
+    "value": 5
+  }
+###
